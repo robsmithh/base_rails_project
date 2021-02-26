@@ -1,0 +1,35 @@
+<%= form_with(url: sign_up_path, method: :post) do |form| %>
+
+  <div class="field form-group">
+    <% form.label :email_address %>
+    <%= form.text_field :email_address, class:"form-control", placeholder:"Email Address", id:"#email_address" %>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :username %>
+    <%= form.text_field :username, class:"form-control", placeholder:"Username", id:'#username' %>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :first_name %>
+    <%= form.text_field :first_name, class:"form-control", placeholder:"First Name", id:"#first_name"%>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :last_name %>
+    <%= form.text_field :last_name, class:"form-control", placeholder:"Last Name", id:'#last_name' %>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :day %>
+    <%= form.text_field :day, class:"form-control", placeholder:"Day", id:'#day' %>
+    <% form.label :month %>
+    <%= form.text_field :month, class:"form-control", placeholder:"Month", id:'#month' %>
+    <% form.label :year %>
+    <%= form.text_field :year, class:"form-control", placeholder:"Year", id:'#year' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:'btn btn-secondary', value:"Create Account" %>
+  </div>
+<% end %>

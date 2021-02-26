@@ -26,7 +26,6 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'bootstrap-sass'
 
-
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -35,13 +34,13 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
+  gem 'factory_bot_rails'
   gem 'pry'
   gem 'rspec-rails', '~> 4.0.2'
   gem 'rubocop'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
-  gem 'factory_bot_rails'
 end
 
 group :development do
