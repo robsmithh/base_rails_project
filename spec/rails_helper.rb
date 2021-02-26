@@ -69,4 +69,8 @@ RSpec.configure do |config|
       with.library :rails
     end
   end
+  
+  config.define_derived_metadata(file_path: Regexp.new('/spec/forms/')) do |metadata|
+    metadata[:type] = 'model'
+  end
 end

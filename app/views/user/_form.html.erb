@@ -1,4 +1,4 @@
-<%= form_with(url: sign_up_path, method: :post) do |form| %>
+<%= form_with_model(model: @sign_up_form, url: sign_up_path, method: :post) do |form| %>
 
   <div class="field form-group">
     <% form.label :email_address %>
@@ -27,6 +27,16 @@
     <%= form.text_field :month, class:"form-control", placeholder:"Month", id:'#month' %>
     <% form.label :year %>
     <%= form.text_field :year, class:"form-control", placeholder:"Year", id:'#year' %>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :password %>
+    <%= form.password_field :password, class:"form-control", placeholder:"Password", id:'#password' %>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :confirm_password %>
+    <%= form.password_field :confirm_password, class:"form-control", placeholder:"Confirm Password", id:'#confirm_password'%>
   </div>
 
   <div class="actions">
